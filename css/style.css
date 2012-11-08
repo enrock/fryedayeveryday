@@ -1,0 +1,1184 @@
+/*
+inspired by http://lessframework.org and goldengridsystem.com
+by Vittorio Vittori
+http://vittoriovittori.com
+http://surfstudio.it
+
+For a more easy to use style,
+I suggest to fix only font-size, visibility and positioning code here
+all the rest of the style can be managed with http://lesscss.org
+*/
+
+/*	Resets
+	------	*/
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, 
+p, blockquote, pre, a, abbr, address, cite, code, del, dfn, em, 
+img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, hr, 
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, 
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figure, figcaption, hgroup, 
+menu, footer, header, nav, section, summary, time, mark, audio, video,
+a img {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+* {
+	outline: none;
+}
+
+article, aside, canvas, figure, figure img, figcaption, hgroup,
+footer, header, nav, section, audio, video {
+	display: block;
+}
+nav li {
+	list-style-type:none;
+}
+
+html {
+  height: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+body {
+  min-height: 100%;
+  font-size: normal 100%;
+}
+
+a {
+  text-decoration: none;
+  color: #3c3c3c;
+}
+
+.black {
+  color: #3c3c3c;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+audio,
+canvas,
+video {
+  display: block;
+}
+
+
+input,
+textarea,
+button,
+select {
+  margin: 0;
+  font-size: 100%;
+  line-height: normal;
+  vertical-align: baseline;
+}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: button;
+}
+input[type="checkbox"], input[type="radio"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+textarea {
+  overflow: auto;
+}
+
+
+/*
+*
+*  Simple fluid media
+*
+*/
+
+/*
+PAGE IMAGES
+*/
+
+figure {
+  position: relative;
+}
+figure img,
+figure object,
+figure embed,
+figure video {
+	max-width: 100%;
+	display: block;
+}
+img {
+	height:auto;
+	max-width:100%;
+	-ms-interpolation-mode: bicubic;
+}
+
+.wrpl img {
+
+-moz-box-shadow: 0 0 5px #888;
+-webkit-box-shadow: 0 0 5px#888;
+box-shadow: 0 0 5px #888;
+}
+
+a img {
+	border:0;
+}
+
+figure figcaption a img {
+	width:auto;
+}
+
+/* golden grid wrapper concept */
+
+/*
+PAGE CONTENT
+*/
+
+/* Selection colours (easy to forget) */
+
+::selection 	 	{ background:rgb(216,216,216); }
+::-moz-selection 	{ background:rgb(216,216,216); }
+img::selection 		{ background:transparent; }
+img::-moz-selection	{ background:transparent; }
+
+
+body {-webkit-tap-highlight-color: rgb(216,216,216);}
+
+/*		Default Layout: 992px. 
+		Gutters: 24px.
+		Outer margins: 48px.
+		Leftover space for scrollbars @1024px: 32px.
+-------------------------------------------------------------------------------
+cols    1     2      3      4      5      6      7      8      9      10
+px      68    160    252    344    436    528    620    712    804    896    */
+
+body {
+	/*	max-width: 1100px;
+	margin: 0 auto;
+	padding-left:2em;
+	padding-right:2em;	*/
+	-webkit-text-size-adjust: 100%;
+	/* Stops Mobile Safari from auto-adjusting font-sizes */
+	padding:3em 4em;
+}
+
+body {
+  color: #3c3c3c;
+  background-image: url("../img/background.gif");
+  background-color: #d0d7da;
+}
+
+.home section article {
+	float: left;
+	margin-bottom:2em;
+}
+
+
+
+article > .navigation {
+	padding-right:.75em;
+}
+
+.contents .line-container + p {
+	padding-bottom: .5em;
+}
+
+.wrapper {
+	padding:2em .75em 0 .75em;
+}
+
+.container {
+	max-width:1192px;
+	margin:auto;
+	position: relative;
+}
+
+.container {
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.25);
+  -o-box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.25);
+  background-color: #fbfbfb;
+  /*border:1px solid rgba(0,0,0,.1);*/
+
+}
+.container section.default-area {
+  overflow: auto;
+  background-color: #fbfbfb;
+}
+.container > header, .container > section {
+  background-color: #fbfbfb;
+}
+.container {
+  border-radius: 0px;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+}
+.container > header {
+  border-radius: 0px 0px 0px 0px;
+  -webkit-border-radius: 0px 0px 0px 0px;
+  -moz-border-radius: 0px 0px 0px 0px;
+}
+.container > footer {
+  border-radius: 0px 0px 0px 0px;
+  -webkit-border-radius: 0px 0px 0px 0px;
+  -moz-border-radius: 0px 0px 0px 0px;
+  background-color: #3c3c3c;
+  color: #d0d7da;
+}
+.container > footer dt {
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.container > footer strong {
+  color: white;
+}
+.container > footer a {
+  color: #888888;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.5);
+  -moz-transition-delay: initial;
+  -moz-transition-duration: 0.3s;
+  -moz-transition-property: all;
+  -moz-transition-timing-function: ease-in-out;
+  -webkit-transition-delay: initial;
+  -webkit-transition-duration: 0.3s;
+  -webkit-transition-property: all;
+  -webkit-transition-timing-function: ease-in-out;
+  -o-transition-delay: initial;
+  -o-transition-duration: 0.3s;
+  -o-transition-property: all;
+  -o-transition-timing-function: ease-in-out;
+  transition-delay: initial;
+  transition-duration: 0.3s;
+  transition-property: all;
+  transition-timing-function: ease-in-out;
+}
+
+.container section {
+	overflow: auto;
+	background-color: #F5F5F5;	/*background-color: #f3f3f3;*/
+}
+
+.scotch_a,
+.scotch_b {
+	position: absolute;
+	
+	top:-20px;
+}
+.scotch_a {
+	left:20%;
+}
+.scotch_b {
+	left:80%;
+}
+
+.default-area footer,
+article + footer {
+	clear: both;
+	padding:2em .75em 0 .75em;
+}
+
+.container > header,
+.container > footer {
+	padding:4em 6em;
+}
+
+.container > footer a:hover {
+  color: white;
+}
+
+
+.container > section {
+	padding-top:4em;
+	padding-bottom:4em;
+}
+
+.line-container {
+	clear: both;
+	padding:2em 0 0 0;
+}
+
+.line {
+  border-top: 1px solid #d0d7da;
+  border-bottom: 1px solid white;
+}
+
+.line {
+	clear: both;
+}
+
+article > figure div.pin-it-button img {
+	width:43px;
+	height:20px;
+}
+/* article > figure div img {
+	height: 100%;
+} */
+
+/*
+NAVIGATION
+*/
+
+.navigation {
+	text-align: right;
+}
+
+.navigation a:last-child {
+	/* margin-left: 1em;*/
+}
+
+/*
+HEADER
+*/
+
+header #logo {
+	float: left;
+}
+header nav li {
+	padding:0 1em;
+}
+
+header #logo {
+	padding:.5em 1em .5em 0em;
+}
+
+header #logo {
+	float: left;
+}
+
+header #logo {
+	padding:.5em 1em .5em 0em;
+}
+
+header nav ul {
+	overflow: auto;
+}
+header nav a {
+	display: block;
+	padding:1em;
+}
+
+header nav a {
+	font-family: 'Dosis', sans-serif;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+header nav a span {
+	display: block;
+}
+
+header nav a span {
+  text-transform: none;
+  color: #afafaf;
+  text-shadow: 1px 1px 0px white;
+  font-weight: normal;
+}
+
+header nav a:hover {
+  background-color: #444747;
+  color: #fbfbfb;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3) inset;
+  -o-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3) inset;
+  -moz-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3) inset;
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3) inset;
+}
+
+header nav a:hover span {
+  text-align: left;
+  text-shadow: none;
+  color: #888888;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.5);
+}
+
+aside h2 {
+	margin-bottom:1em;
+}
+
+h3 {
+  text-transform: uppercase;
+}
+			
+.smalltitles {
+	font: 14px Helvetica, sans-serif;
+	font-weight: 500;
+	}
+	
+.sidetext h3 {
+	font: 1.3em 'Dosis', sans-serif;
+	font-weight: 800;
+	margin: 0px;
+	padding:0px;
+	}
+	
+.contents p, article p {
+	padding-top: .5em;
+	padding-bottom: 1em;
+}
+
+.contents p, article p {
+	font-weight: 200;
+	color: #666;
+	list-style: none;
+	margin-top: -0.4em;
+	margin-bottom: 0.2em;
+	font-size: 0.85em;
+	font-family: Helvetica, sans-serif;
+	line-height: 1.4em;
+	/*color: #afafaf;*/
+	text-shadow: 1px 1px 0px #fff;
+}
+
+.sidetext {
+		width:49%;
+		float: right;
+	}
+	
+.boldtype {
+	font: 1.4em 'Dosis', sans-serif;
+	font-weight: 200;
+	color: #afafaf;
+	list-style: none;
+	line-height: 1.3em;
+	margin-top: -0.4em;
+	margin-bottom: 0.2em;
+	text-shadow: 1px 1px 0px #fff;
+	}
+
+.normal, h3 {
+  /* 16px / 24px */
+  font-size: 1em;
+  /* 24 */
+}
+
+.big, h2 {
+	font-size: 1.3em;
+	font-family: 'Dosis', sans-serif;
+}
+
+.large, h1 {
+  /* 26 / 36px */
+
+  font-size: 2em;
+  font-family: 'Dosis', sans-serif;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 0px white;
+}
+
+.col-3 article p {
+	width: 85%;
+	font-weight: 200;
+	color: #666;
+	list-style: none;
+	margin-top: -0.4em;
+	margin-bottom: 0.2em;
+	font-size: 0.87em;
+	font-family: Helvetica, sans-serif;
+	line-height: 1.4em;
+	/*color: #afafaf;*/
+	text-shadow: 1px 1px 0px #fff;
+}
+
+
+.huge {
+  /* 42px / 48px */
+
+  font-size: 2.625em;
+  /*line-height: 1.1428571428571428em;*/
+}
+
+section h2 {
+	padding-top:1em;
+}
+
+
+
+section h1, section > h1 {
+  font-size: 2em;
+  text-shadow: 1px 1px 0px white;
+}
+section h1 span {
+  color: #afafaf;
+  text-shadow: 1px 1px 0px white;
+}
+
+/*
+TEXT STYLES
+*/
+
+article .arrow {
+	display:inline !important;
+}
+
+section {
+	overflow: auto;
+}
+
+figcaption {
+	padding:1em;
+}
+
+figcaption div {
+	padding-top:.5em;
+}
+
+article p {
+	padding-top:.5em;
+	font: .875em Arial, Helvetica, sans-serif;
+	line-height: 1.3em;
+}
+
+.h-padding {
+	padding-left:.75em;
+	padding-right:.75em;
+}
+.b-padding {
+	padding-bottom:2em;
+}
+
+
+.col-3 article {
+	width:33.33%;
+	padding-left:.75em;
+	padding-right:.75em;
+}
+
+.col-3 article:nth-child(3n + 1) {
+	clear: both;
+}
+
+
+
+/*.contents.col-3 p,
+.contents.col-3 figure,*/
+.col-3 .element {
+	width:33.33%;
+}
+/*
+
+/*
+.col-3 article:nth-child(3n + 1) {
+	padding:0 1em 0 0;
+}
+.col-3 article:nth-child(3n + 2) {
+	padding:0 .5em;
+}
+.col-3 article:nth-child(3n + 3) {
+	padding:0 0 0 1em;
+}
+
+*/
+
+.contents.split {
+	width:75%;
+}
+
+aside {	
+	overflow: visible;
+	width:25%;
+	padding-top:2em;
+	padding-left:1em;
+	padding-right:.75em; 
+}
+
+aside a {
+	overflow: visible;
+	display: block;
+	width:100%;
+	display: block;
+	padding:0 .75em 1em .75em;
+}
+
+aside .line {
+	margin:1em 0;
+}
+
+/*.contents p, article p {
+	padding-top:2em;
+}*/
+
+.contents figure {
+	margin-top:2em;
+}
+
+.clear {
+	clear: both;
+}
+
+.contents figure,
+.elements .element, {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+	float: left;
+	width:100%;
+}
+
+article > figure {
+	padding-top:2em;
+	clear: both;
+}
+
+.wrp {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.wrpl {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+	float: left;
+}
+
+.w-1-2,
+.contents p.w-1-2,
+.contents figure.w-1-2,
+.contents .element.w-1-2,
+.contents dl.w-1-2,
+.inner-elements .element.w-1-2,
+.elements .element.w-1-2 {
+	width:50%;
+}
+
+
+
+.w-1-3,
+.contents p.w-1-3,
+.contents figure.w-1-3,
+.contents .element.w-1-3,
+.contents dl.w-1-3,
+.inner-elements .element.w-1-3,
+.elements .element.w-1-3 {
+	width:33.33%;
+}
+
+.w-1-4,
+.contents p.w-1-4,
+.contents figure.w-1-4,
+.contents .element.w-1-4,
+.contents dl.w-1-4,
+.inner-elements .element.w-1-4,
+.elements .element.w-1-4 {
+	width:25%;
+}
+.w-2-3,
+.contents p.w-2-3,
+.contents figure.w-2-3,
+.contents .element.w-2-3,
+.contents dl.w-2-3,
+.inner-elements .element.w-2-3,
+.elements .element.w-2-3 {
+	width:66.66%;
+}
+.w-2-4,
+.contents p.w-2-4,
+.contents figure.w-2-4,
+.contents .element.w-2-4,
+.contents dl.w-2-4,
+.inner-elements .element.w-2-4,
+.elements .element.w-2-4 {
+	width:50%;
+}
+.w-3-4,
+.contents p.w-3-4,
+.contents figure.w-3-4,
+.contents .element.w-3-4,
+.contents dl.w-3-4,
+.inner-elements .element.w-3-4,
+.elements .element.w-3-4 {
+	width:75%;
+}
+
+.w-2-2,
+.w-3-3,
+.w-4-4,
+.col-2 .element.w-full,
+.contents p.w-full,
+.contents figure.w-full,
+.contents dl.w-full,
+.inner-elements .element.w-full,
+.elements .element.w-full {
+	width:100% !important;
+}
+
+section {
+	padding-left:5.25em;
+	padding-right:5.25em;
+}
+
+.title {
+	font-family: 'Dosis', sans-serif;
+	display: block;
+	padding-bottom:.25em;
+}
+
+/*
+IMAGE PROPERTIES
+*/
+
+figure figcaption div img {
+	max-height: 20px;
+	height:20px;
+}
+
+.thumbnail {
+	/*display:inline-block;*/
+	padding-bottom:1em;
+}
+
+figure img,
+aside img {
+	width:100%;
+	height:auto;
+}
+
+figure img, .sideimage img {
+-moz-box-shadow: 0 0 5px #888;
+-webkit-box-shadow: 0 0 5px#888;
+box-shadow: 0 0 5px #888;
+}
+
+#posts article .arrow img {
+	width: auto;
+}
+
+.sideimage img {
+	width:49%;
+}
+
+.sideimage img {
+	width:49%;
+	float: left;
+	padding: 0px;
+	margin: 0px;
+}
+
+
+/*
+FOOTER
+*/
+
+.default-area footer,
+article + footer {
+	clear: both;
+	padding:2em .75em 0 .75em;
+}
+
+.default-area footer img,
+article + footer img {
+	position: relative;
+	top:3px;
+	left:.25em;
+}
+
+
+
+/*
+FOOTER ATTRIBUTES
+*/
+
+footer > .wrpl:first-child,
+footer > .wrpl:last-child {
+	width:25%;
+	
+}
+
+footer > .wrpl {
+	width:50%;
+	padding:0 1em;
+}
+
+footer > .wrpl:first-child {
+	padding:0 1em 0 0;
+}
+
+footer > .wrpl:last-child {
+	padding:0 0 0 1em;
+}
+footer .wrpl:first-child dl {
+	padding-right:0;
+}
+footer > .wrpl:last-child > div {
+	padding-top:2em;
+}
+footer .wrpl dl {
+	float: left;
+	padding-right:2em;
+}
+
+#footer-search {
+	padding:.5em;
+}
+
+@media only screen and (min-width: 1400px) {
+	
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1180px) {
+	body {
+		padding:2em 3em;
+	}
+	
+	header nav li {
+		padding-right:0;
+	}
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+	
+	body {
+		padding:2em 2em;
+	}
+	
+	.container > header {
+		padding:3em 4em;
+	}
+	.landscape {
+		padding-left:4em;
+		padding-right:4em;
+	}
+	
+	#post,
+	#comments,
+	section,
+	.elements,
+	#footer,
+	.landscape {
+		padding-left:3.25em;
+		padding-right:3.25em;
+	}
+
+	.container > section {
+		padding-top:3em;
+		padding-bottom:3em;
+	}
+	header nav li {
+		padding-right:0;
+	}
+	.contents.split,
+	.contents {
+		width: 100%;
+	}
+	aside {
+		padding-left:0;
+		padding-right:0;
+		width: 100%;
+		clear: both;
+	}
+	
+	aside a {
+		width:25%;
+	}
+	aside a:nth-child(4n + 1) {
+		clear: both;
+	}
+	
+	.col-4 article:nth-child(4n + 1) {
+		clear: none;
+	}
+	.col-4 article {
+		width: 33.33%;
+	}
+	.col-4 article:nth-child(3n + 1) {
+		clear: both;
+	}
+}
+
+
+
+/*		Mobile Layout: 320px.
+		Gutters: 24px.
+		Outer margins: 34px.
+		Inherits styles from: Default Layout.
+---------------------------------------------
+cols    1     2      3
+px      68    160    252    */
+
+@media only screen and (max-width: 767px) {
+
+	.w-1-2,
+	.w-2-2,
+	.w-1-3,
+	.w-2-3,
+	.w-3-3,
+	.w-1-4,
+	.w-2-4,
+	.w-3-4,
+	.w-4-4 {
+		width: 100% !important;
+	}
+	
+	#posts .w-2-3,
+	article header.w-3-4 {
+		width:66.66% !important;
+	}
+	#posts .w-1-3,
+	article header + div.w-1-4 {
+		width:33.33% !important;
+	}
+	
+	.contents.split,
+	.contents {
+		width: 100%;
+	}
+	
+	aside {
+		padding-left:0;
+		padding-right:0;
+		width: 100%;
+		clear: both;
+	}
+	
+	aside a {
+		width:25%;
+		padding:0 .75em;
+	}
+	
+	.container > header {
+		text-align: center;
+	}
+	.container > header {
+		padding:3em 2em;
+	}
+	
+	header #logo {
+		float: none;
+		padding:.5em 0em .5em 0em
+	}
+	header nav {
+		clear: both;
+	}
+	.container header nav ul {
+		text-align: center;
+	}
+	.container header nav li {
+		padding: 0;
+		display: inline-block;
+		text-align: left;
+		float: none;
+	}
+	.container header nav li span {
+		display: none;
+	}
+	
+	body {
+		padding:2em 1em;
+	}
+	
+	.container > header {
+		padding:2em 3em;
+	}
+	
+	#post,
+	#comments,
+	section,
+	.elements,
+	#footer,
+	.landscape {
+		padding-left:2.25em;
+		padding-right:2.25em;
+	}
+	
+	.landscape {
+		padding-left:3em;
+		padding-right:3em;
+	}
+	
+	#post, section {
+		padding-left:2.25em;
+		padding-right:2.25em;
+	}
+
+	.container > section {
+		padding-top:2em;
+		padding-bottom:2em;
+	}
+	
+	
+	
+}
+
+
+
+/*		Wide Mobile Layout: 480px.
+		Gutters: 24px.
+		Outer margins: 22px.
+		Inherits styles from: Default Layout, Mobile Layout.
+------------------------------------------------------------
+cols    1     2      3      4      5
+px      68    160    252    344    436    */
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+	
+	
+	body {
+		padding:2em 0em;
+	}
+	
+	.container > header {
+		padding:2em 2em;
+	}
+	
+	.container header li a {
+		padding:.25em .75em;
+	}
+	
+	#footer > div {
+		width:100%;
+		padding:.75em;
+	}
+	
+	.elements .element {
+		width: 100%;
+	}
+	
+	aside a,
+	.col-3 article,
+	.col-4 article {
+		width:50%;
+	}
+	aside a:nth-child(3n + 1),
+	.col-3 article:nth-child(3n + 1),
+	.col-4 article:nth-child(3n + 1) {
+		clear: none;
+	}
+	aside a:nth-child(2n + 1),
+	.col-3 article:nth-child(2n + 1),
+	.col-4 article:nth-child(2n + 1) {
+		clear: both;
+	}
+	.home section article {
+		margin-bottom:2em;
+	}/*
+	aside a,
+	.col-3 article,
+	.col-4 article {
+		width:33.33%;
+	}
+	aside a:nth-child(4n + 1),
+	.col-3 article:nth-child(4n + 1) ,
+	.col-4 article:nth-child(4n + 1) {
+		clear: none;
+	}
+	aside a:nth-child(3n + 1),
+	.col-3 article:nth-child(3n + 1),
+	.col-4 article:nth-child(3n + 1) {
+		clear: both;
+	}*/
+}
+
+@media only screen and (max-width: 480px) {
+		.sidetext,
+	.sideimage img,
+	#posts .w-2-3,
+	article header.w-3-4,
+	#posts .w-1-3,
+	article header + div.w-1-4 {
+		width:100% !important;
+	}
+	
+	.elements .element {
+		width: 100%;
+	}
+	
+	.container > header {
+		padding:2em 1em;
+	}
+	.container header li a {
+		padding:.25em;
+	}
+	#footer > div {
+		width:100%;
+		padding:.75em;
+	}
+	
+	
+	
+	body {
+		padding:0em 0em;
+	}
+	
+	#post,
+	#comments,
+	section,
+	.elements,
+	#footer,
+	.landscape {
+		padding-left:1.25em;
+		padding-right:1.25em;
+	}
+	
+	.scotch_a,
+	.scotch_b {
+		display: none;
+	}
+	
+	aside a,
+	.col-3 article,
+	.col-4 article {
+		width:100%;
+		padding-bottom:1em;
+	}
+	
+	aside a:nth-child(3n + 1),
+	.col-3 article:nth-child(3n + 1),
+	.col-4 article:nth-child(3n + 1) {
+		clear: none;
+	}
+	aside a:nth-child(2n + 1),
+	.col-3 article:nth-child(2n + 1),
+	.col-4 article:nth-child(2n + 1) {
+		clear: both;
+	}
+	.home section article {
+		margin-bottom:1em;
+	}
+}
+
+@media only screen and (max-width: 320px) {
+	
+	aside a,
+	.col-3 article,
+	.col-4 article {
+		width:100%;
+	}
+	.home section article {
+		margin-bottom:1em;
+	}
+}
+
+
+/*	Retina media query.
+	Overrides styles for devices with a 
+	device-pixel-ratio of 2+, such as iPhone 4.
+-----------------------------------------------    */
+
+@media 
+	only screen and (-webkit-min-device-pixel-ratio: 2),
+	only screen and (min-device-pixel-ratio: 2) {
+	
+	
+}
