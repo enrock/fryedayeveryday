@@ -322,6 +322,10 @@ article + footer {
 	clear: both;
 }
 
+.clear {
+	clear: both;
+	}
+
 article > figure div.pin-it-button img {
 	width:43px;
 	height:20px;
@@ -421,6 +425,8 @@ h3 {
 	/*font: 1em 'Molengo', sans-serif;*/
 	font-family: 'Dosis', sans-serif;
 	font-weight: 500;
+	text-shadow: 1px 1px 0px #fff;
+	color: #666;
 	}
 	
 .sidetext h3 {
@@ -515,8 +521,6 @@ section h2 {
 	margin-bottom: .2em;
 }
 
-
-
 section h1, section > h1 {
   font-size: 2em;
   text-shadow: 1px 1px 0px white;
@@ -525,6 +529,10 @@ section h1 span {
   color: #afafaf;
   text-shadow: 1px 1px 0px white;
 }
+
+.serviceshead {
+	padding-bottom: 5em;
+	}
 
 /*
 TEXT STYLES
@@ -831,14 +839,15 @@ footer .footblock ul {
 	font-family: 'Dosis', sans-serif;
 	/*font-family: 'Molengo', sans-serif;*/
 	text-shadow: none;
-	font-weight: 800;
+	font-weight: 500;
 }
 
 #footer .footblock ul li span {
 	text-shadow: none;
-	font-weight: 800;
+	font-weight: 500;
 	color: #fff;
 }
+
 
 footer .footblock ul li {
 	font-weight: 500;
