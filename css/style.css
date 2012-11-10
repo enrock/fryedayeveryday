@@ -1,14 +1,3 @@
-/*
-inspired by http://lessframework.org and goldengridsystem.com
-by Vittorio Vittori
-http://vittoriovittori.com
-http://surfstudio.it
-
-For a more easy to use style,
-I suggest to fix only font-size, visibility and positioning code here
-all the rest of the style can be managed with http://lesscss.org
-*/
-
 /*	Resets
 	------	*/
 
@@ -102,12 +91,6 @@ textarea {
 
 
 /*
-*
-*  Simple fluid media
-*
-*/
-
-/*
 PAGE IMAGES
 */
 
@@ -115,9 +98,7 @@ figure {
   position: relative;
 }
 figure img,
-figure object,
-figure embed,
-figure video {
+ {
 	max-width: 100%;
 	display: block;
 }
@@ -128,7 +109,6 @@ img {
 }
 
 .wrpl img {
-
 -moz-box-shadow: 0 0 5px #888;
 -webkit-box-shadow: 0 0 5px#888;
 box-shadow: 0 0 5px #888;
@@ -141,8 +121,6 @@ a img {
 figure figcaption a img {
 	width:auto;
 }
-
-/* golden grid wrapper concept */
 
 /*
 PAGE CONTENT
@@ -181,13 +159,6 @@ body {
   background-image: url("../img/background.gif");
   background-color: #d0d7da;
 }
-
-.home section article {
-	float: left;
-	margin-bottom:2em;
-}
-
-
 
 article > .navigation {
 	padding-right:.75em;
@@ -240,34 +211,6 @@ article > .navigation {
   background-color: #3c3c3c;
   color: #d0d7da;
 }
-.container > footer dt {
-  color: white;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-.container > footer strong {
-  color: white;
-}
-.container > footer a {
-  color: #888888;
-  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.5);
-  -moz-transition-delay: initial;
-  -moz-transition-duration: 0.3s;
-  -moz-transition-property: all;
-  -moz-transition-timing-function: ease-in-out;
-  -webkit-transition-delay: initial;
-  -webkit-transition-duration: 0.3s;
-  -webkit-transition-property: all;
-  -webkit-transition-timing-function: ease-in-out;
-  -o-transition-delay: initial;
-  -o-transition-duration: 0.3s;
-  -o-transition-property: all;
-  -o-transition-timing-function: ease-in-out;
-  transition-delay: initial;
-  transition-duration: 0.3s;
-  transition-property: all;
-  transition-timing-function: ease-in-out;
-}
 
 .container section {
 	overflow: auto;
@@ -287,12 +230,6 @@ article > .navigation {
 	left:80%;
 }
 
-.default-area footer,
-article + footer {
-	clear: both;
-	padding:2em .75em 0 .75em;
-}
-
 .container > header,
 .container > footer {
 	padding:4em 6em;
@@ -301,7 +238,6 @@ article + footer {
 .container > footer a:hover {
   color: white;
 }
-
 
 .container > section {
 	padding-top:4em;
@@ -326,13 +262,6 @@ article + footer {
 	clear: both;
 	}
 
-article > figure div.pin-it-button img {
-	width:43px;
-	height:20px;
-}
-/* article > figure div img {
-	height: 100%;
-} */
 
 /*
 NAVIGATION
@@ -449,8 +378,6 @@ h3 {
 	margin-bottom: 0.2em;
 	font-size: 1em;
 	font-family: 'Dosis', sans-serif;
-    /*font-family: 'Molengo', sans-serif;
-	font-family: 'Lekton', sans-serif;*/
 	line-height: 1.4em;
 	/*color: #afafaf;*/
 	text-shadow: 1px 1px 0px #fff;
@@ -484,8 +411,6 @@ h3 {
 }
 
 .large, h1 {
-  /* 26 / 36px */
-
   font-size: 2em;
   font-family: 'Dosis', sans-serif;
   text-transform: uppercase;
@@ -501,17 +426,11 @@ h3 {
 	margin-bottom: 0.2em;
 	font-size: 1em;
     font-family: 'Dosis', sans-serif;
-	/*font-family: 'Molengo', sans-serif;
-	font-family: Helvetica, sans-serif;*/
 	line-height: 1.4em;
-	/*color: #afafaf;*/
 	text-shadow: 1px 1px 0px #fff;
 }
 
-
 .huge {
-  /* 42px / 48px */
-
   font-size: 2.625em;
   /*line-height: 1.1428571428571428em;*/
 }
@@ -533,25 +452,20 @@ section h1 span {
 .serviceshead {
 	padding-bottom: 5em;
 	}
+	
+.title {
+	font-family: 'Dosis', sans-serif;
+	display: block;
+	padding-bottom:.25em;
+}
+
 
 /*
 TEXT STYLES
 */
 
-article .arrow {
-	display:inline !important;
-}
-
 section {
 	overflow: auto;
-}
-
-figcaption {
-	padding:1em;
-}
-
-figcaption div {
-	padding-top:.5em;
 }
 
 article p {
@@ -568,7 +482,6 @@ article p {
 	padding-bottom:2em;
 }
 
-
 .col-3 article {
 	width:33.33%;
 	padding-left:.75em;
@@ -579,55 +492,9 @@ article p {
 	clear: both;
 }
 
-
-
-/*.contents.col-3 p,
-.contents.col-3 figure,*/
-.col-3 .element {
-	width:33.33%;
-}
-/*
-
-/*
-.col-3 article:nth-child(3n + 1) {
-	padding:0 1em 0 0;
-}
-.col-3 article:nth-child(3n + 2) {
-	padding:0 .5em;
-}
-.col-3 article:nth-child(3n + 3) {
-	padding:0 0 0 1em;
-}
-
-*/
-
 .contents.split {
 	width:75%;
 }
-
-aside {	
-	overflow: visible;
-	width:25%;
-	padding-top:2em;
-	padding-left:1em;
-	padding-right:.75em; 
-}
-
-aside a {
-	overflow: visible;
-	display: block;
-	width:100%;
-	display: block;
-	padding:0 .75em 1em .75em;
-}
-
-aside .line {
-	margin:1em 0;
-}
-
-/*.contents p, article p {
-	padding-top:2em;
-}*/
 
 .contents figure {
 	margin-top:2em;
@@ -637,8 +504,7 @@ aside .line {
 	clear: both;
 }
 
-.contents figure,
-.elements .element, {
+.contents figure, {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-o-box-sizing: border-box;
@@ -652,13 +518,6 @@ article > figure {
 	clear: both;
 }
 
-.wrp {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-o-box-sizing: border-box;
-	box-sizing: border-box;
-}
-
 .wrpl {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -667,86 +526,10 @@ article > figure {
 	float: left;
 }
 
-.w-1-2,
-.contents p.w-1-2,
-.contents figure.w-1-2,
-.contents .element.w-1-2,
-.contents dl.w-1-2,
-.inner-elements .element.w-1-2,
-.elements .element.w-1-2 {
-	width:50%;
-}
-
-
-
-.w-1-3,
-.contents p.w-1-3,
-.contents figure.w-1-3,
-.contents .element.w-1-3,
-.contents dl.w-1-3,
-.inner-elements .element.w-1-3,
-.elements .element.w-1-3 {
-	width:33.33%;
-}
-
-.w-1-4,
-.contents p.w-1-4,
-.contents figure.w-1-4,
-.contents .element.w-1-4,
-.contents dl.w-1-4,
-.inner-elements .element.w-1-4,
-.elements .element.w-1-4 {
-	width:25%;
-}
-.w-2-3,
-.contents p.w-2-3,
-.contents figure.w-2-3,
-.contents .element.w-2-3,
-.contents dl.w-2-3,
-.inner-elements .element.w-2-3,
-.elements .element.w-2-3 {
-	width:66.66%;
-}
-.w-2-4,
-.contents p.w-2-4,
-.contents figure.w-2-4,
-.contents .element.w-2-4,
-.contents dl.w-2-4,
-.inner-elements .element.w-2-4,
-.elements .element.w-2-4 {
-	width:50%;
-}
-.w-3-4,
-.contents p.w-3-4,
-.contents figure.w-3-4,
-.contents .element.w-3-4,
-.contents dl.w-3-4,
-.inner-elements .element.w-3-4,
-.elements .element.w-3-4 {
-	width:75%;
-}
-
-.w-2-2,
-.w-3-3,
-.w-4-4,
-.col-2 .element.w-full,
-.contents p.w-full,
-.contents figure.w-full,
-.contents dl.w-full,
-.inner-elements .element.w-full,
-.elements .element.w-full {
-	width:100% !important;
-}
 
 section {
 	padding-left:5.25em;
 	padding-right:5.25em;
-}
-
-.title {
-	font-family: 'Dosis', sans-serif;
-	display: block;
-	padding-bottom:.25em;
 }
 
 /*
@@ -775,40 +558,12 @@ figure img, .sideimage img {
 box-shadow: 0 0 5px #888;
 }
 
-#posts article .arrow img {
-	width: auto;
-}
-
-.sideimage img {
-	width:49%;
-}
-
 .sideimage img {
 	width:49%;
 	float: right;
 	padding: 0px;
 	margin: 0px;
 }
-
-
-/*
-FOOTER
-*/
-
-.default-area footer,
-article + footer {
-	clear: both;
-	padding:2em .75em 0 .75em;
-}
-
-.default-area footer img,
-article + footer img {
-	position: relative;
-	top:3px;
-	left:.25em;
-}
-
-
 
 /*
 FOOTER ATTRIBUTES
@@ -914,20 +669,16 @@ filter:alpha(opacity=40); /* For IE8 and earlier */
 		padding:2em 2em;
 	}
 	
+	.container {
+		color: red;
+		}
+	
 	.container > header {
 		padding:3em 4em;
 	}
-	.landscape {
-		padding-left:4em;
-		padding-right:4em;
-	}
 	
-	#post,
-	#comments,
 	section,
-	.elements,
-	#footer,
-	.landscape {
+	#footer {
 		padding-left:3.25em;
 		padding-right:3.25em;
 	}
@@ -936,36 +687,15 @@ filter:alpha(opacity=40); /* For IE8 and earlier */
 		padding-top:3em;
 		padding-bottom:3em;
 	}
+	
 	header nav li {
 		padding-right:0;
 	}
-	.contents.split,
+	
 	.contents {
 		width: 100%;
 	}
-	aside {
-		padding-left:0;
-		padding-right:0;
-		width: 100%;
-		clear: both;
-	}
-	
-	aside a {
-		width:25%;
-	}
-	aside a:nth-child(4n + 1) {
-		clear: both;
-	}
-	
-	.col-4 article:nth-child(4n + 1) {
-		clear: none;
-	}
-	.col-4 article {
-		width: 33.33%;
-	}
-	.col-4 article:nth-child(3n + 1) {
-		clear: both;
-	}
+
 }
 
 
@@ -979,43 +709,13 @@ cols    1     2      3
 px      68    160    252    */
 
 @media only screen and (max-width: 767px) {
-
-	.w-1-2,
-	.w-2-2,
-	.w-1-3,
-	.w-2-3,
-	.w-3-3,
-	.w-1-4,
-	.w-2-4,
-	.w-3-4,
-	.w-4-4 {
-		width: 100% !important;
-	}
 	
-	#posts .w-2-3,
-	article header.w-3-4 {
-		width:66.66% !important;
-	}
-	#posts .w-1-3,
-	article header + div.w-1-4 {
-		width:33.33% !important;
-	}
+		.container {
+		color: blue;
+		}
 	
-	.contents.split,
 	.contents {
 		width: 100%;
-	}
-	
-	aside {
-		padding-left:0;
-		padding-right:0;
-		width: 100%;
-		clear: both;
-	}
-	
-	aside a {
-		width:25%;
-		padding:0 .75em;
 	}
 	
 	.container > header {
@@ -1053,22 +753,8 @@ px      68    160    252    */
 		padding:2em 3em;
 	}
 	
-	#post,
-	#comments,
 	section,
-	.elements,
-	#footer,
-	.landscape {
-		padding-left:2.25em;
-		padding-right:2.25em;
-	}
-	
-	.landscape {
-		padding-left:3em;
-		padding-right:3em;
-	}
-	
-	#post, section {
+	#footer {
 		padding-left:2.25em;
 		padding-right:2.25em;
 	}
@@ -1077,11 +763,8 @@ px      68    160    252    */
 		padding-top:2em;
 		padding-bottom:2em;
 	}
-	
-	
-	
+		
 }
-
 
 
 /*		Wide Mobile Layout: 480px.
@@ -1094,6 +777,9 @@ px      68    160    252    344    436    */
 
 @media only screen and (min-width: 480px) and (max-width: 767px) {
 	
+	.container {
+	color: green;
+	}
 	
 	body {
 		padding:2em 0em;
@@ -1112,43 +798,31 @@ px      68    160    252    344    436    */
 		padding:.75em;
 	}
 	
-	.elements .element {
-		width: 100%;
-	}
-	
-	aside a,
-	.col-3 article,
-	.col-4 article {
+	.col-3 article {
 		width:50%;
 	}
-	aside a:nth-child(3n + 1),
-	.col-3 article:nth-child(3n + 1),
-	.col-4 article:nth-child(3n + 1) {
+	
+
+	.col-3 article:nth-child(3n + 1) {
 		clear: none;
 	}
-	aside a:nth-child(2n + 1),
-	.col-3 article:nth-child(2n + 1),
-	.col-4 article:nth-child(2n + 1) {
+
+	.col-3 article:nth-child(2n + 1) {
 		clear: both;
 	}
-	.home section article {
-		margin-bottom:2em;
-	}
+
 }
 
 @media only screen and (max-width: 480px) {	
-	
-	.sidetext,
-	.sideimage img,
-	#posts .w-2-3,
-	article header.w-3-4,
-	#posts .w-1-3,
-	article header + div.w-1-4 {
-		width:100% !important;
+
+	.container {
+	color: yellow;
 	}
 	
-	.elements .element {
-		width: 100%;
+	.sidetext,
+	.sideimage img
+	 {
+		width:100% !important;
 	}
 	
 	.container > header {
@@ -1162,18 +836,12 @@ px      68    160    252    344    436    */
 		padding:.75em;
 	}
 	
-	
-	
 	body {
 		padding:0em 0em;
 	}
 	
-	#post,
-	#comments,
 	section,
-	.elements,
-	#footer,
-	.landscape {
+	#footer {
 		padding-left:1.25em;
 		padding-right:1.25em;
 	}
@@ -1183,25 +851,18 @@ px      68    160    252    344    436    */
 		display: none;
 	}
 	
-	aside a,
-	.col-3 article,
-	.col-4 article {
+	.col-3 article {
 		width:100%;
 		padding-bottom:1em;
 	}
 	
 	aside a:nth-child(3n + 1),
-	.col-3 article:nth-child(3n + 1),
-	.col-4 article:nth-child(3n + 1) {
+	.col-3 article:nth-child(3n + 1) {
 		clear: none;
 	}
 	aside a:nth-child(2n + 1),
-	.col-3 article:nth-child(2n + 1),
-	.col-4 article:nth-child(2n + 1) {
+	.col-3 article:nth-child(2n + 1) {
 		clear: both;
-	}
-	.home section article {
-		margin-bottom:1em;
 	}
 	
 	/*FOOTER PROPERTIES*/
@@ -1269,14 +930,14 @@ footer .footblock ul li {
 
 @media only screen and (max-width: 320px) {
 	
-	aside a,
-	.col-3 article,
-	.col-4 article {
+	.container {
+	color: pink;
+	}
+	
+	.col-3 article {
 		width:100%;
 	}
-	.home section article {
-		margin-bottom:1em;
-	}
+
 }
 
 
