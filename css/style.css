@@ -241,7 +241,8 @@ article > .navigation {
 
 .container > section {
 	padding-top:4em;
-	padding-bottom:4em;
+	/*padding-bottom:4em;*/
+	padding-bottom:3em;
 }
 
 .line-container {

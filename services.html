@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-	
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">	
 	<meta charset="utf-8">
-	
 	<meta name="viewport" content="width=device-width, user-scalable=no, maximum-scale=1">
-	
-	<title>Fryedayeveryday Services</title>
+	<title>Fryeday Everyday Work</title>
 
     <link href="css/style.css" rel="stylesheet" type="text/css">
 	<link href='http://fonts.googleapis.com/css?family=Dosis:300,400,500' rel='stylesheet' type='text/css'>
+    
+    <link rel="stylesheet" href="css/demo.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+	<!-- Modernizr -->
+  <script src="js/modernizr.js"></script>
     
     <!-- Add jQuery library -->
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
@@ -44,14 +47,14 @@
 			<header>
 				<a id="logo" title="Fryedayeveryday.com" href="index.html"><img alt="" src="img/logo.png"></a>
 				<nav>
-					<ul>
-						<li class="wrpl"><a title="" href="index.html">Home<span>seriously</span></a></li>
-                        <li class="wrpl"><a title="" href="services.html">Sklls<span>about me
+										<ul>
+						<li class="wrpl"><a title="" href="index.html">Home<span>my services</span></a></li>
+                        <li class="wrpl"><a title="" href="services.html">Work<span>the goods
 </span></a></li>
 
-						<li class="wrpl"><a title="" href="#">Swagger<span>Services
+												<li class="wrpl"><a title="" href="#">Blog<span>just sayin'
 </span></a></li>
-<li class="wrpl"><a title="" href="#">Contact<span>Speak me
+<li class="wrpl"><a title="" href="#">Contact<span>Speak to me
 </span></a></li>					</ul>
 				</nav>
 			</header>
@@ -60,7 +63,7 @@
 
 <section>
 			<div class="hdpadding bbpadding">
-				<h1>Creating anticipation. Producing the goods.™</h1>	
+				<h1>Creating anticipation. <span>Producing the goods.™</span></h1>	
 			</div>
             
 				<div class="col-3">
@@ -149,11 +152,43 @@
                 <a class="fancybox" rel="group" href="img/v_product_entrenuity.jpg"><img src="img/small_product_entrenuity.jpg" alt="" title="" height="600" width="1000"></a>					
 					<a title="" href="#"><h2>Entrenuity</h2></a>
 					<span class="smalltitles">Branding</span>
-					<p>Serving under-resourced communities through entrepreneurship education since 1999, Entrenuity's identity required updating. Vicki composed the organization's tag line and contributed to the update of its mission statement, logo and overall identity.</p> 					
-									
-                    </article>
-						
-				</div>
+					<p>Serving under-resourced communities through entrepreneurship education since 1999, Entrenuity's identity required updating. Vicki composed the organization's tag line and contributed to the update of its mission statement, logo and overall identity.</p> 								
+                    </article>	   
+				</div>         
+		</section>
+<div class="line"></div>    
+<section>
+			<div class="hdpadding bbpadding">
+				<h1>Creating anticipation. <span>Producing the goods.</span></h1>
+			</div>
+								
+<div id="wrapper" class="cf">
+   
+	<div id="main" role="main">
+      <section class="slider">
+        <div class="flexslider">
+          <ul class="slides">
+            <li>
+  	    	    <p>"I had the pleasure of working with Vicki Frye while I was VP, Sales & Marketing at UMI. Vicki was reliable, strategic, and connected extremely well with all types of people. The first thing I think of in regards to Vicki, is her "can-do" attitude and the positive energy that she brought to our office!"
+<br><em>-Mark Smalls, VP and Chief Marketing Officer at JAMS.</em></p> 
+  	    	</li>
+          
+            <li>
+  	    	    <p>"Vicki's expertise is an asset to our organization. I plan to continue working with her to grow our brand and develop new product offerings."
+<br><em>-L. Brian Jenkins, President, Entrenuity, Inc.</em></p> 
+  	    	</li>
+  	    	<li>
+  	    	    <p>"It has been a wonderful pleasure to work with Ms. Frye on our first book, C.A.L.L.E.D. to Teach. Vicki was faithful to the assignment and very accessible at all times. Her expertise was evident in the finished project. However her assistance did not stop there, her availability after the project has been very helpful."
+<br><em>-Rev. Barbara Peacock, The Park Church, Charlotte, NC.</em></p> 
+  	    	</li>
+
+          </ul>
+        </div>
+      </section>
+    </div>
+  </div>                   
+                                
+                                
 		</section>
 <!--FOOTER-->
 			<footer id="footer">
@@ -168,7 +203,7 @@
                         		<div class="clear"></div>
 			   </article>
                
-                <article class="footblock">
+               <article class="footblock">
 					<ul>
 						<li><img src="img/small_logo.png"></li>
 						<li><strong>Fryeday Everyday</strong></li>
@@ -177,10 +212,31 @@
 						<li><a title="" href="#">Skills</a></li>
 						<li><a title="" href="#">Swagger</a></li>
                         <li><a title="" href="#">Contact</a></li>
-
-			   </article>
                	   </ul>
+                </article>
          <div class="clear"></div>
 			</footer>
-		</div><!--CONTAINER END-->		
+		</div><!--CONTAINER END-->   
+  <!-- jQuery -->
+  <!-- FlexSlider -->
+  <script defer src="js/jquery.flexslider.js"></script>
+  
+  <script type="text/javascript">
+    $(function(){
+      SyntaxHighlighter.all();
+    });
+    $(window).load(function(){
+      $('.flexslider').flexslider({
+        animation: "slide",
+        start: function(slider){
+          $('body').removeClass('loading');
+        }
+      });
+    });
+  </script>
+  
+  <!-- Optional FlexSlider Additions -->
+  <script src="js/jquery.easing.js"></script>
+  <script src="js/jquery.flexslider-min.js"></script>
+  <script defer src="js/demo.js"></script>				
 </body></html>
