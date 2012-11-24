@@ -96,11 +96,13 @@ PAGE IMAGES
 figure {
   position: relative;
 }
+
 figure img,
  {
 	max-width: 100%;
 	display: block;
 }
+
 img {
 	height:auto;
 	max-width:100%;
@@ -377,7 +379,7 @@ color: #3c3c3c;
 	color: #666;
 	list-style: none;
 	margin-top: -0.4em;
-	margin-bottom: 0.2em;
+	margin-bottom: 0.8em;
 	font-size: 1em;
 	font-family: 'Dosis', sans-serif;
 	line-height: 1.4em;
@@ -448,8 +450,8 @@ section h1, section > h1 {
   text-shadow: 1px 1px 0px white;
 }
 section h1 span {
-  color: #afafaf;
-  text-shadow: 1px 1px 0px white;
+	color: #afafaf;
+	text-shadow: 1px 1px 0px white;
 }
 
 .serviceshead {
@@ -502,10 +504,6 @@ article p {
 	margin-top:2em;
 }
 
-.clear {
-	clear: both;
-}
-
 .contents figure, {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -513,6 +511,10 @@ article p {
 	box-sizing: border-box;
 	float: left;
 	width:100%;
+}
+
+.clear {
+	clear: both;
 }
 
 article > figure {
