@@ -85,6 +85,14 @@ text-shadow: 1px 1px 0px #fff;
 -webkit-font-smoothing: antialiased;
 	}
 	
+.flexslider .slides li img {
+width: 288px;
+height: 173px;
+margin: auto;
+border: 1px solid #CCC;
+box-shadow: 0 0 5px #888;
+	}	
+	
 .flexslider .slides li p em {
 margin-top: 2em;
 font-size: .8em;

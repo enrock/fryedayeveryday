@@ -116,7 +116,9 @@ box-shadow: 0 0 5px #888;
 }
 
 .volume img:hover {
-	opacity: 0.5;
+	background-image: url("../img_hover.jpg");
+	/*opacity: 0.5;*/
+	box-shadow: 0 0 5px #999900;
 }
 
 a img {
