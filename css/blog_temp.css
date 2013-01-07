@@ -103,7 +103,6 @@ figure img,
 	display: block;
 }
 
-
 img {
 	height:auto;
 	max-width:100%;
@@ -155,10 +154,11 @@ body {
   color: #3c3c3c;
   background-image: url("../img/background.gif");
   background-color: #d0d7da;
-  font-family: 'Dosis', sans-serif;
 }
 
-
+article > .navigation {
+	padding-right:.75em;
+}
 
 .contents .line-container + p {
 	padding-bottom: .5em;
@@ -230,10 +230,6 @@ body {
 	padding:4em 6em;
 }
 
-.container > footer a {
-  font-family: 'Dosis', sans-serif;
-}
-
 .container > footer a:hover {
   color: white;
 }
@@ -267,6 +263,14 @@ body {
 NAVIGATION
 */
 
+.navigation {
+	text-align: right;
+}
+
+.navigation a:last-child {
+	/* margin-left: 1em;*/
+}
+
 /*
 HEADER
 */
@@ -276,6 +280,14 @@ header #logo {
 }
 header nav li {
 	padding:0 1em;
+}
+
+header #logo {
+	padding:.5em 1em .5em 0em;
+}
+
+header #logo {
+	float: left;
 }
 
 header #logo {
@@ -325,6 +337,28 @@ header nav a:hover span {
   color: #888888;
   text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.5);
 }
+
+aside h2 {
+	margin-bottom:1em;
+}
+
+h3 {
+  text-transform: uppercase;
+}
+			
+.smalltitles {
+font-family: 'Dosis', sans-serif;
+font-weight: 500;
+text-shadow: 1px 1px 0px #fff;
+color: #3c3c3c;
+	}
+	
+.sidetext h3 {
+	font: 1.5em 'Dosis', sans-serif;
+	font-weight: 800;
+	margin-bottom: .4em;
+	padding:0px;
+	}
 	
 .contents p, article p {
 	padding-top: .5em;
@@ -360,7 +394,23 @@ header nav a:hover span {
 	text-shadow: 1px 1px 0px #fff;
 	}
 
+.normal, h3 {
+  /* 16px / 24px */
+  font-size: 1em;
+  /* 24 */
+}
 
+.big, h2 {
+	font-size: 1.3em;
+	font-family: 'Dosis', sans-serif;
+}
+
+.large, h1 {
+  font-size: 2em;
+  font-family: 'Dosis', sans-serif;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 0px white;
+}
 
 .col-3 article p {
 	width: 85%;
@@ -380,46 +430,6 @@ header nav a:hover span {
   /*line-height: 1.1428571428571428em;*/
 }
 
-aside h2 {
-	margin-bottom:1em;
-}
-
-h3 {
-  text-transform: uppercase;
-}
-			
-.smalltitles {
-font-family: 'Dosis', sans-serif;
-font-weight: 500;
-text-shadow: 1px 1px 0px #fff;
-color: #3c3c3c;
-	}
-	
-.sidetext h3 {
-	font: 1.5em 'Dosis', sans-serif;
-	font-weight: 800;
-	margin-bottom: .4em;
-	padding:0px;
-	}
-
-.normal, h3 {
-  /* 16px / 24px */
-  font-size: 1em;
-  /* 24 */
-}
-
-.big, h2 {
-	font-size: 1.3em;
-	font-family: 'Dosis', sans-serif;
-}
-
-.large, h1 {
-  font-size: 2em;
-  font-family: 'Dosis', sans-serif;
-  text-transform: uppercase;
-  text-shadow: 1px 1px 0px white;
-}
-
 section h2 {
 	color: #3c3c3c;
 	padding-top:1em;
@@ -430,7 +440,6 @@ section h1, section > h1 {
   font-size: 2em;
   text-shadow: 1px 1px 0px white;
 }
-
 section h1 span {
 	color: #afafaf;
 	text-shadow: 1px 1px 0px white;
@@ -551,7 +560,6 @@ box-shadow: 0 0 5px #888;
 	margin: 0px 0px 2em 0px;
 }
 
-
 /*
 FOOTER ATTRIBUTES
 */
@@ -588,12 +596,19 @@ footer .footblock ul {
   transition-timing-function: ease-in-out;
 }
 
-footer .footblock ul li strong, footer .footblock ul li span{
+footer .footblock ul li strong {
 	font-family: 'Dosis', sans-serif;
 	text-shadow: none;
 	font-weight: 500;
 	color: #fff;
-	} 
+}
+
+footer .footblock ul li span {
+	text-shadow: none;
+	font-weight: 500;
+	color: #fff;
+}
+
 
 footer .footblock ul li {
 	font-weight: 500;
@@ -601,29 +616,30 @@ footer .footblock ul li {
 	list-style: none;
 	font-size: 1em;
 	font-family: 'Dosis', sans-serif;
+    /*font-family: 'Molengo', sans-serif;
+	color: #afafaf;*/
 }
 
 footer > .social {
 	/*width: 60%;*/
-	width: 60%;
-	padding:0em;
+	width: 268px;
+	padding:0 1em;
 }
 
 footer .social {
-	margin: 0em;
+	padding: 0px;
+	margin: 0px;
 float: right;
 }
 
 footer .social ul {
 display: block;
-padding: 0px;
-margin: 0px;
 }
 
 footer .social ul li {
 	float: right;
 	list-style: none;
-	padding: 0em .45em;
+	padding-left: 1em;
 }
 
 footer .social ul li img {
@@ -634,25 +650,6 @@ filter:alpha(opacity=60); /* For IE8 and earlier */
 footer .social ul li img:hover {
 opacity:0.4;
 filter:alpha(opacity=40); /* For IE8 and earlier */
-}
-
-footer .final{
-font: 1em 'Open Sans', Helvetica, sans-serif;
-font-weight: 100;
-margin:10px 0 0 0;
-text-align:center;
-}
-								
-footer .crafted{
-font-size: 0.875em;
-font-weight:300;
-color:#888;
-}
-									
-footer .copyright{
-font-size: 0.6875em;
-color:#C0C0C0;
-margin-top:4px;
 }
 
 /*FORM ATTRIBUTES*/
@@ -750,7 +747,6 @@ box-sizing: border-box;
 		text-align: left;
 		float: none;
 	}
-	
 	.container header nav li span {
 		display: none;
 	}
@@ -817,17 +813,11 @@ box-sizing: border-box;
 	footblock ul {
 		float: right;
 		}
-
-/*centers and adjusts button ul*/
-	footer .social {
-	width: 90%;
-	float: none;
-	margin: auto;
-	}
-
-	footer .social ul li img {
-	width: 94%;
-	}
+		
+/*adjusts width of footer button box*/
+	footer > .social {
+	width: 268px;
+}
 	
 	.col-3 article {
 		width:50%;
@@ -888,24 +878,35 @@ box-sizing: border-box;
 FOOTER PROPERTIES
 */
 
-/*centers and adjusts button ul*/
-footer .social {
-width: 100%;
-float: none;
+	/*adjusts width of footer button box*/
+	footer > .social {
+	margin: auto;
+	width: 268px;
+	padding:0px;
+	float: none;
+}
+	
+	#footer > div {
+		width:100%;
+		padding:.75em;
+	}
+
+
+footer > .social:first-child,
+footer > .social:last-child {
+	width:100%;	
 }
 
 footer .social ul {
-	width: 98%;
-display: block;
-float: none;
-padding: 0em;
-margin: auto;
+	width: 78%;
+	margin: auto;
+	padding-right:6%;
 }
 
 footer .social ul li {
-	padding: 0em 2%;
+	margin: auto;
+display: inline;
 }
-
 
 footer > .footblock:first-child,
 footer > .footblock:last-child {
@@ -940,41 +941,34 @@ footer .footblock ul li {
 	list-style: none;
 	font-size: 0.87em;
 	font-family: Helvetica, sans-serif;
+	/*color: #afafaf;*/
 	text-shadow: 1px 1px 0px #fff;
 }
 
+footer .social ul li img {
+width: 80%;
+}
+
+footer .social ul li {
+	float: right;
+	list-style: none;
+	padding-left: 1em;
+}
 
 }
 
 @media only screen and (max-width: 320px) {
-	/*IPHONE ATTRIBUTES*/
 	
-.col-3 article {
-width:100%;
+	.col-3 article {
+		width:100%;
 	}
 	
-footer .social {
-width: 100%;
-float: none;
-}
-
-footer .social ul {
-width: 100%;
-}
-
-footer .social ul li img {
-width: 60%;
-padding: 0px;
-margin: 0px;
-}
-
-footer .social ul li {
-display: inline;
-padding: 0em 1%;
-margin: 0px;
+	footer .social ul li img {
+width: 70%;
 }
 
 }
+
 
 /*	Retina media query.
 	Overrides styles for devices with a 

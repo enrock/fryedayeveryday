@@ -1,0 +1,312 @@
+@media only screen and (min-width: 1400px) {
+	
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1180px) {
+	
+.container {
+	background: red;
+	}
+	
+.summary {
+margin: auto;
+width: 68%;
+}
+	
+hgroup {
+padding: 95px 9.4736842% 95px 9.4736842%;
+}
+
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+	
+#services ul{
+margin-top: 10px; 
+list-style: none;
+}
+ 
+.skills {
+width:50%;
+text-align: center;
+padding: 0px 0px 0px 0px;
+float: left;
+margin-bottom: 30px;
+}
+	
+.software {
+width:50%;
+text-align: center;
+padding: 0px 0px 0px 0px;
+float: right;
+}
+	
+#services {
+margin: auto;
+padding: 50px 14.4736842% 56px 14.4736842%;
+}
+	
+hgroup {
+padding: 95px 8.4736842% 95px 8.4736842%;  
+}
+
+}
+
+@media only screen and (max-width: 767px) {	
+
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) { /*borrowed fron 767, this query fixed problem*/
+
+#container {
+width: 100%;
+}
+	
+.logo {
+width: 215px;
+height: 54px;
+float: none;
+margin: 0px auto 10px;
+}
+
+nav {
+width: 100%;
+height: 80px;
+margin: 0;
+padding: 26px 0px 66px 0px;
+}
+
+nav ul{
+display: block;
+width: 330px;
+float: none;	
+padding-left: 9%;
+margin: 0px auto 0px;
+}
+	
+nav li {
+margin-left: 0px;
+}
+			
+section {
+width: 100%;
+padding:0px;
+margin: 0px;
+}
+		
+#services {
+margin: auto;
+padding: 50px 13.4736842% 56px 13.4736842%;
+}
+	
+/*
+image box properties
+*/
+	
+#work {
+margin: auto;
+width: 80%;
+padding: 50px 5.4736842% 56px 9.4736842%;
+}
+	
+#work .thumbbox {
+width:36.33%;
+border: 1px solid #ccc;
+display: inline;
+float: right;
+margin: 1.5em 11% 6% 0em;
+}
+
+/*
+FORM PROPERTIES
+*/
+		
+.formbox {
+margin: auto;
+padding: 50px 6.4736842% 56px 6.4736842%;
+}
+
+form {
+width: 80%;
+padding: 5% 0% 5% 0%;
+margin: 0px auto 50px;
+border: 1px solid #D8D8D8;
+}
+	
+hgroup {
+padding: 95px 7.4736842% 95px 7.4736842%; 
+}	
+}
+
+@media only screen and (max-width: 480px) { /*iphone styles that work. adjust nav bar*/
+
+#container {
+width: 100%;
+margin: auto;
+border-right: 0px;
+border-left: 0px;
+background-color: #fff;
+padding: 0px;
+}
+	
+/*
+Nav properties inherited from above screen width
+*/	
+	
+.logo {
+width: 215px;
+height: 54px;
+float: none;
+margin: 0px auto 10px;
+}
+
+nav {
+width: 100%;
+height: 80px;
+margin: 0;
+padding: 26px 0px 66px 0px;
+}
+
+nav ul{
+float: none;
+padding: 0px;
+margin: 0px auto 0px;
+}
+
+nav li {
+margin-left: 4.5%; /*this adjusts left nav prob*/
+}
+
+nav li:not(:last-child):after{
+font-size: 1em;
+margin: 0px 8px; /*this adjusts nav li space prob*/
+}
+
+/*possible eliminate above pseudo class to fix nav centering*/
+	
+.formbox {
+margin: auto;
+padding: 50px 1% 56px 1%;
+}
+
+form {
+width: 86%;
+padding: 5% 0% 5% 0%;
+margin: 0px auto 50px;
+border: 1px solid #D8D8D8;
+}		
+  	
+/*
+page properties
+*/
+
+section {
+width: 100%;
+}
+		
+.summary {
+margin: auto;
+width: 80%;
+padding: 50px 9.4736842% 16px 9.4736842%;
+}
+	
+#services_section {
+width: 100%;
+border: 0px;
+	}
+
+#services {
+width: 80%;
+padding: 50px 9.4736842% 56px 9.4736842%;
+}
+		  
+.skills {
+width: 100%;
+text-align: center;
+float: none;
+}
+	
+.software {
+width: 100%;
+text-align: center;
+float: none;
+}
+	
+hgroup {
+padding: 95px 5.4736842% 95px 5.4736842%;
+}
+
+/*
+image box properties
+*/
+
+#work_section {
+width: 100%;
+border: 0px;
+margin-bottom: 80px;
+}
+
+#work {
+margin: auto;
+width: 84%;
+padding: 50px 5.4736842% 56px 5.4736842%;
+}
+	
+#work .thumbbox {
+width:90.33%;
+border: 1px solid #ccc;
+display: block;
+float: none;
+margin: 1.5em auto 15%;
+}
+
+/*
+SOCIAL MEDIA BUTTONS
+*/
+
+.social-block{
+margin:5px auto 0 auto;
+text-align:center;
+width:100%;
+border: 1px solid red;
+}
+	
+.social-block .teammate{
+display:inline-block;
+position:relative;
+width:70px;
+height:93px;
+padding-right: 3%;
+border: 1px solid blue;
+}
+	
+.social-block .name{
+font-family: 1.125em Helvetica, sans-serif;
+font-weight: 100;
+color: #666;
+padding: 0px;
+margin-top: 0px;
+border: 1px solid green;
+}
+
+footer li a {
+font: 90% 'Open Sans', Helvetica, sans-serif;
+font-weight: 100;
+}
+
+}
+
+@media only screen and (min-width: 320px) {
+}
+
+
+/*	Retina media query.
+	Overrides styles for devices with a 
+	device-pixel-ratio of 2+, such as iPhone 4.
+-----------------------------------------------    */
+
+@media 
+	only screen and (-webkit-min-device-pixel-ratio: 2),
+	only screen and (min-device-pixel-ratio: 2) {	
+}
